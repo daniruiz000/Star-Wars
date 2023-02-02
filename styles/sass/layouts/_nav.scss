@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+    &__link{
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $secondary-color;
+        background-color: $tertiary-color;
+        border-radius: 100px;
+        margin-bottom: 15px;
+        width: 100%;
+        cursor: pointer;
+        padding: 18px;
+
+        @include adaptTo('not-mobile'){
+            width: calc(50% - 30px);
+            margin: 15px;
+        }
+    }
+}

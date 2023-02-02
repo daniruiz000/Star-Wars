@@ -1,0 +1,63 @@
+.header{
+    text-align: center;
+    height: 70px;
+    background-color: $tertiary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include adaptTo('not-mobile'){
+        height: 90px;
+    }
+    @include adaptTo('desktop-xl'){
+        max-width: 1280px;
+        border-radius: 100px;
+        margin: 65px auto 20px auto;
+    }
+
+    &__title{
+        font-family: 'Poller One';
+        font-size: 18px;
+        @include adaptTo('not-mobile'){
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle{
+        font-size: 14px;
+        display: block;
+        @include adaptTo('not-mobile'){
+            font-size: 20px;
+        }
+    }
+    
+    &--home{
+        background-image: url(../../assets/images/cabecera.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: $primary-color;
+        height: 100vh;
+
+        @include adaptTo('desktop-xl'){
+            height: 580px;
+            border-radius: 500px;
+            
+        }
+
+        .header__title{
+            font-size: 34px;
+            @include adaptTo('not-mobile'){
+                font-size: 40px;
+            }
+        }
+
+        .header__subtitle{
+            font-size: 24px;
+            @include adaptTo('not-mobile'){
+                font-size: 32px;
+            }
+        }
+
+    }
+}
+

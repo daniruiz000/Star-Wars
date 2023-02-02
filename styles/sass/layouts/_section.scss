@@ -1,0 +1,33 @@
+.section{
+    @include adaptTo('desktop-xl'){
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    &__title{
+        font-family: 'Poller One';
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $nine-color;
+        height: 50px;
+
+        @include adaptTo('not-mobile'){
+            font-size: 20px;
+        }
+
+        @include adaptTo('desktop-xl'){
+            border-radius: 100px;
+            max-width: 360px;
+            margin: 20px auto 20px auto;
+        }
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

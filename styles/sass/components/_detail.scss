@@ -1,0 +1,141 @@
+.detail{
+    width: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include adaptTo('not-mobile'){
+        margin: 10px;
+        padding: 10px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    &__img{
+        width: 100%;
+        @include adaptTo('not-mobile'){
+            width: 250px;
+        }
+    }
+
+    &__info-container{
+        margin: 20px 0;
+        width: 100%;
+        @include adaptTo('not-mobile'){
+            width: calc(100% - 250px);
+        }
+    }
+
+    &__title{
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        padding: 20px;
+
+        @include adaptTo('not-mobile'){
+            font-size: 30px;
+            background-color: $septenary-color;
+            text-align: left;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+    }
+
+    &__info-title{
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @include adaptTo('not-mobile'){
+            font-size: 16px;
+            padding-left: 30px;
+        }
+    }
+
+    &__info{
+        font-size: 18px;
+        margin-bottom: 20px;
+
+
+        @include adaptTo('not-mobile'){
+            font-size: 20px;
+            padding-left: 30px;
+        }
+    }
+
+    &__options-container{
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    &__options-title{
+        font-size: 14px;
+        font-weight: 700;
+        padding: 30px 0;
+
+        @include adaptTo('desktop-l'){
+            text-align: center;
+            font-size: 24px;
+        }
+
+        @include adaptTo('desktop-xl'){
+            text-align: center;
+            font-size: 24px;
+        }
+
+    }
+
+    &__img-container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include adaptTo('desktop-l'){
+            justify-content: center;
+        }
+
+        @include adaptTo('desktop-xl'){
+            justify-content: center
+        }
+    }
+
+    &__options-img{
+        width: 83px;
+        border-radius: 100px;
+        margin: 5px;
+        cursor: pointer;
+        @include adaptTo('not-mobile'){
+            width: 100px;
+            margin: 15px;
+        }
+
+    }
+
+    &--starship{
+        @include adaptTo('not-mobile'){
+            .detail__img{
+                width: 500px;
+                margin: 0 auto;
+            }
+
+            .detail__title {
+                border-radius: 200px;
+                text-align: center;
+            }
+
+            .detail__info-container{
+                padding-left: 0;
+                width: 100%;
+                max-width: 900px;
+            }
+
+        }
+    }
+}
